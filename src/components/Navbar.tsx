@@ -36,7 +36,9 @@ export default function Navbar() {
     <header
       className={clsx(
         "sticky top-0 z-50 transition-all duration-300",
-        isSticky ? "bg-white/90 backdrop-blur shadow-sm" : "bg-transparent"
+        isSticky
+          ? "bg-white dark:bg-darkBlack backdrop-blur shadow-sm"
+          : "bg-transparent"
       )}
     >
       <nav className="container mx-auto flex items-center justify-between">
@@ -61,7 +63,7 @@ export default function Navbar() {
         </span>
         {/* Mobile nav */}
         <div
-          className={`absolute left-0 top-16 bg-white w-full z-999 shadow-sm p-5 flex xl:hidden flex-col gap-2 transition-all duration-300 ${
+          className={`absolute left-0 top-16 bg-white dark:bg-darkBlack w-full z-999 shadow-sm p-5 flex xl:hidden flex-col gap-2 transition-all duration-300 ${
             isShow ? "translate-x-0" : "-translate-x-full"
           }`}
         >

@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --color-likeOrange: #fe9703;
   --color-likeGreen: #26ae61;
+  --color-darkBlack: #0a0a0a;
   --font-mont: var(--font-mont);
 }
 
