@@ -64,7 +64,7 @@ export default function Navbar() {
         </span>
         {/* Mobile nav */}
         <div
-          className={`absolute left-0 top-16 bg-white dark:bg-darkBlack w-full z-999 shadow-sm p-5 flex xl:hidden flex-col gap-2 transition-all duration-300 ${
+          className={`absolute left-0 top-16 bg-white text-darkBlack dark:text-white dark:bg-darkBlack w-full z-999 shadow-sm p-5 flex xl:hidden flex-col gap-2 transition-all duration-300 ${
             isShow ? "translate-x-0" : "-translate-x-full"
           }`}
         >
