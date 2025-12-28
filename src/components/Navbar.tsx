@@ -15,7 +15,6 @@ export default function Navbar() {
 
   // navbar close and open
   const handleNavbar = (status: string) => {
-    console.log(status);
     if (status === "open") {
       setIsShow(true);
     } else {
@@ -35,7 +34,9 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 transition-all duration-300",
+        `fixed w-full top-0 z-50 transition-all duration-300 ${
+          isSticky ? "text-darkBlack" : "text-white"
+        }`,
         isSticky
           ? "bg-white dark:bg-darkBlack backdrop-blur shadow-sm"
           : "bg-transparent"
