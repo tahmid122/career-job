@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   variable: "--font-mont",
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable}`}>
+        <Navbar />
         {children}
+        <Footer />
         <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>

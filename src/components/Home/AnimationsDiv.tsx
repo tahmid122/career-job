@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import { FaPlus } from "react-icons/fa6";
 
 const AnimationsDiv = () => {
   return (
@@ -26,8 +27,10 @@ const AnimationsDiv = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="h-8 w-8 rounded-full border-2 border-likeOrange absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
-      ></motion.div>
+        className="h-8 w-8 flex items-center justify-center rounded-full border-2 border-likeOrange absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+      >
+        <FaPlus className="text-white" />
+      </motion.div>
     </div>
   );
 };
