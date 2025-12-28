@@ -2,11 +2,14 @@ import Image from "next/image";
 import { FaPlus } from "react-icons/fa6";
 
 import SearchBox from "./SearchBox";
+import AnimationsDiv from "./AnimationsDiv";
 const Banner = () => {
   return (
-    <section className="border bg-[url('/banner.jpg')] bg-no-repeat bg-center bg-cover">
+    <section className="border bg-[url('/banner.jpg')] bg-no-repeat bg-center bg-cover  overflow-hidden">
       <div className="container">
-        <div className="mt-25 h-125 xl:h-170 flex flex-col justify-center gap-5">
+        <div className="mt-25 h-125 xl:h-170 flex flex-col justify-center gap-5 relative">
+          {/* Animations */}
+          <AnimationsDiv />
           {/* Heading */}
           <h1 className="text-3xl xl:text-5xl text-white font-medium xl:leading-14">
             <span className="text-likeOrange font-semibold">2560</span>{" "}
