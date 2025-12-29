@@ -24,7 +24,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
+      setIsSticky(window.scrollY > 1);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        `fixed w-full top-0 z-50 transition-all duration-300 ${
+        `fixed w-full top-0 z-50 transition-all duration-300 py-3 xl:py-5 ${
           isSticky ? "text-darkBlack" : "text-white"
         }`,
         isSticky
@@ -44,8 +44,10 @@ export default function Navbar() {
     >
       <nav className="container mx-auto flex items-center justify-between">
         {/* logo */}
-        <Link href={"/"} className="flex items-center">
-          <Image src={"/logo.png"} width={70} height={70} alt="logo" />
+        <Link href={"/"} className="flex items-center gap-1">
+          <div className="h-10 w-10 relative">
+            <Image src={"/logo.png"} fill alt="logo" />
+          </div>
           <span className="text-2xl font-bold">CareerJob</span>
         </Link>
         {/* Toggle */}

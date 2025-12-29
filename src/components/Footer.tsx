@@ -14,8 +14,10 @@ const Footer = () => {
           {/* Upper */}
           <div className="grid grid-cols-1 xl:grid-cols-4 pb-10 gap-10">
             <div>
-              <div className="flex items-center">
-                <Image src={"/logo.png"} height={100} width={100} alt="logo" />
+              <div className="flex items-center gap-1">
+                <div className="h-10 w-10 relative">
+                  <Image src={"/logo.png"} fill alt="logo" />
+                </div>
                 <h1 className="text-2xl font-bold text-white">CareerJob</h1>
               </div>
               <p className="text-gray-300 text-justify">
