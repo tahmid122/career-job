@@ -7,7 +7,6 @@ export default function Home() {
       <Banner />
       {/* Jobs */}
       <Jobs />
-      <div className="h-155"></div>
     </div>
   );
 }
