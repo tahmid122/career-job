@@ -75,10 +75,10 @@ export default function Navbar() {
               <Link href={"/"}>Home</Link>
             </li>
             <li className="hover:text-likeOrange relative transition-all duration-200 after:absolute after:block after:h-0.5 after:bg-likeOrange after:w-0 after:bottom-0 after:left-0 hover:after:w-full hover:after:transition-all hover:after:duration-300 after:transition-all after:duration-300">
-              <Link href={"/"}>Jobs</Link>
+              <Link href={"/jobs"}>Jobs</Link>
             </li>
             <li className="hover:text-likeOrange relative transition-all duration-200 after:absolute after:block after:h-0.5 after:bg-likeOrange after:w-0 after:bottom-0 after:left-0 hover:after:w-full hover:after:transition-all hover:after:duration-300 after:transition-all after:duration-300">
-              <Link href={"/"}>Bookmarks</Link>
+              <Link href={"/bookmarks"}>Bookmarks</Link>
             </li>
             <li>
               <Link
@@ -104,10 +104,10 @@ export default function Navbar() {
             <Link href={"/"}>Home</Link>
           </li>
           <li className="hover:text-likeOrange relative transition-all duration-200 after:absolute after:block after:h-0.5 after:bg-likeOrange after:w-0 after:bottom-0 after:left-0 hover:after:w-full hover:after:transition-all hover:after:duration-300 after:transition-all after:duration-300">
-            <Link href={"/"}>Jobs</Link>
+            <Link href={"/jobs"}>Jobs</Link>
           </li>
           <li className="hover:text-likeOrange relative transition-all duration-200 after:absolute after:block after:h-0.5 after:bg-likeOrange after:w-0 after:bottom-0 after:left-0 hover:after:w-full hover:after:transition-all hover:after:duration-300 after:transition-all after:duration-300">
-            <Link href={"/"}>Bookmarks</Link>
+            <Link href={"/bookmarks"}>Bookmarks</Link>
           </li>
         </ul>
         {/* Buttons */}
