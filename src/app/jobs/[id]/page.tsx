@@ -1,14 +1,31 @@
 import Form from "@/components/JobDetails/Form";
+import { JobType } from "@/types/job";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   FaAngleRight,
   FaArrowRight,
   FaDollarSign,
   FaLocationDot,
 } from "react-icons/fa6";
-
-const JobDetails = () => {
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+const JobDetails = async ({ params }: PageProps) => {
+  const { id } = await params;
+  const mainId: number = parseInt(id);
+  const res = await fetch(`${process.env.API_URL}/jobs`, {
+    next: { revalidate: 60 },
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch");
+  }
+  const data: JobType[] = await res.json();
+  const targetJob = data.find((job) => job.id === mainId);
+  if (!targetJob) {
+    notFound();
+  }
   return (
     <section className="min-h-screen bg-[#F5F7FC]">
       {/* Banner */}
@@ -31,30 +48,38 @@ const JobDetails = () => {
                 <div className="flex xl:flex-row flex-col items-start gap-2 xl:gap-4">
                   <div className="h-16 w-16 relative">
                     <Image
-                      src={"/slack.webp"}
+                      src={targetJob?.logo}
                       fill
                       alt="company logo"
                       className="p-2 object-cover"
                     />
                   </div>
                   <div className="space-y-2 xl:space-y-4">
-                    <span className="inline-block py-1 px-2 uppercase text-likeGreen rounded bg-gray-100 font-bold text-xs">
-                      Full time
-                    </span>
-                    <h3 className="text-lg font-bold">
-                      Senior Graphics Designer
-                    </h3>
+                    <div className="flex items-center gap-2">
+                      {targetJob.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className={`${
+                            tag !== "Urgent"
+                              ? "block py-1 px-2 uppercase text-likeGreen rounded bg-gray-100 font-bold text-xs"
+                              : "block py-1 px-2 uppercase text-white rounded bg-red-500 font-bold text-xs"
+                          }`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-lg font-bold">{targetJob.title}</h3>
                     {/* Skills */}
                     <div className="flex items-center flex-wrap gap-1">
-                      <span className="block py-2 px-3 uppercase text-slate-500 rounded bg-gray-100 font-bold text-xs">
-                        Photoshop
-                      </span>
-                      <span className="block py-2 px-3 uppercase text-slate-500 rounded bg-gray-100 font-bold text-xs">
-                        Illustrator
-                      </span>
-                      <span className="block py-2 px-3 uppercase text-slate-500 rounded bg-gray-100 font-bold text-xs">
-                        Canva
-                      </span>
+                      {targetJob?.skills.map((skill, idx) => (
+                        <span
+                          key={idx}
+                          className="block py-2 px-3 uppercase text-slate-500 rounded bg-gray-100 font-bold text-xs"
+                        >
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -62,14 +87,15 @@ const JobDetails = () => {
               {/* middle */}
               <div className="flex items-center gap-2">
                 <span className="flex items-end gap-1 text-sm text-slate-600">
-                  <FaLocationDot className="text-xl text-likeGreen" /> Florida
+                  <FaLocationDot className="text-xl text-likeGreen" />{" "}
+                  {targetJob.location}
                 </span>
                 <div className="flex items-center gap-1">
                   <span className="flex items-center">
                     <FaDollarSign className="text-likeGreen text-base" />
                   </span>
                   <span className="flex items-center text-base text-slate-600 leading-0">
-                    18k - 30k
+                    {targetJob.salary}
                   </span>
                 </div>
               </div>
@@ -88,56 +114,42 @@ const JobDetails = () => {
                     Responsibilities
                   </h3>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-base text-gray-600 font-medium">
-                      <Image
-                        src={"/tick.png"}
-                        width={20}
-                        height={20}
-                        alt="tick"
-                        className="mt-1"
-                      />{" "}
-                      Create visually appealing graphics, illustrations, and
-                      layouts for various projects.
-                    </li>
-                    <li className="flex items-start gap-2 text-base text-gray-600 font-medium">
-                      <Image
-                        src={"/tick.png"}
-                        width={20}
-                        height={20}
-                        alt="tick"
-                        className="mt-1"
-                      />{" "}
-                      Collaborate with clients and internal teams to understand
-                      design requirements and objectives.
-                    </li>
+                    {targetJob?.responsibilities?.map((res, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-base text-gray-600 font-medium"
+                      >
+                        <Image
+                          src={"/tick.png"}
+                          width={20}
+                          height={20}
+                          alt="tick"
+                          className="mt-1"
+                        />{" "}
+                        {res}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 {/* section 2 */}
                 <div>
                   <h3 className="text-2xl font-semibold mb-5">Requirements</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-base text-gray-600 font-medium">
-                      <Image
-                        src={"/tick.png"}
-                        width={20}
-                        height={20}
-                        alt="tick"
-                        className="mt-1"
-                      />{" "}
-                      Bachelor’s degree in Graphic Design, Visual Arts, or a
-                      related field.
-                    </li>
-                    <li className="flex items-start gap-2 text-base text-gray-600 font-medium">
-                      <Image
-                        src={"/tick.png"}
-                        width={20}
-                        height={20}
-                        alt="tick"
-                        className="mt-1"
-                      />{" "}
-                      Proven experience as a graphics designer, with a strong
-                      portfolio showcasing diverse projects.
-                    </li>
+                    {targetJob.requirements.map((req, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-base text-gray-600 font-medium"
+                      >
+                        <Image
+                          src={"/tick.png"}
+                          width={20}
+                          height={20}
+                          alt="tick"
+                          className="mt-1"
+                        />{" "}
+                        {req}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -153,25 +165,25 @@ const JobDetails = () => {
                       <span className="text-gray-600 font-semibold min-w-1/2">
                         Company Name
                       </span>
-                      InnoTech Solution
+                      {targetJob?.company}
                     </li>
                     <li className="w-full flex text-base">
                       <span className="text-gray-600 font-semibold min-w-1/2">
                         Job Title
                       </span>
-                      Senior Graphics Designer
+                      {targetJob?.title}
                     </li>
                     <li className="w-full flex text-base">
                       <span className="text-gray-600 font-semibold min-w-1/2">
                         Job Type
                       </span>
-                      Full Time
+                      {targetJob.type}
                     </li>
                     <li className="w-full flex text-base">
                       <span className="text-gray-600 font-semibold min-w-1/2">
                         Salary
                       </span>
-                      $1800
+                      {targetJob?.salary}
                     </li>
                   </ul>
                 </div>
