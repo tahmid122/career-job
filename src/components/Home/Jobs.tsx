@@ -1,8 +1,17 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import JobCard from "../JobCard";
+import { JobType } from "@/types/job";
 
-const Jobs = () => {
+const Jobs = async () => {
+  const res = await fetch(`${process.env.API_URL}/jobs`, {
+    next: { revalidate: 60 },
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch");
+  }
+  const data: JobType[] = await res.json();
+  const featuredJobs: JobType[] = data.slice(0, 6);
   return (
     <section>
       <div className="container">
@@ -15,10 +24,11 @@ const Jobs = () => {
           </div>
           {/* jobs */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <JobCard />
-            <JobCard />
-            <JobCard />
-            <JobCard />
+            {featuredJobs &&
+              featuredJobs.length > 0 &&
+              featuredJobs.map((singleJob) => (
+                <JobCard key={singleJob?.id} singleJob={singleJob} />
+              ))}
           </div>
         </div>
       </div>

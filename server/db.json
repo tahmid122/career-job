@@ -1,0 +1,466 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "tags": ["Full time", "Urgent"],
+      "title": "Senior Graphics Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "InnoTech Solutions",
+      "logo": "https://i.ibb.co.com/7drSZd5C/1631354992644.jpg",
+      "location": "Dhaka",
+      "skills": ["photoshop", "illustrator", "canva"],
+      "deadline": "12/29/2025",
+      "salary": "18k - 30k",
+      "experience": 5,
+      "responsibilities": [
+        "Create visually appealing graphics, illustrations, and layouts for various projects.",
+        "Collaborate with clients and internal teams to understand design requirements and objectives."
+      ],
+      "requirements": [
+        "Bachelor's degree in Graphic Design, Visual Arts, or a related field.",
+        "Proven experience as a graphics designer, with a strong portfolio showcasing diverse projects."
+      ]
+    },
+    {
+      "id": 2,
+      "tags": ["Full time"],
+      "title": "Frontend Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "Digital Wave",
+      "logo": "https://i.ibb.co.com/7J3CXBXc/digitalwavetechnology-logo.jpg",
+      "location": "Chittagong",
+      "skills": ["react", "javascript", "css"],
+      "deadline": "01/15/2026",
+      "salary": "25k - 40k",
+      "experience": 3,
+      "responsibilities": [
+        "Develop responsive and user-friendly web interfaces using modern frameworks.",
+        "Work closely with backend developers to integrate APIs and ensure seamless functionality."
+      ],
+      "requirements": [
+        "Bachelor's degree in Computer Science or related field.",
+        "Strong proficiency in React, JavaScript, HTML, and CSS."
+      ]
+    },
+    {
+      "id": 3,
+      "tags": ["Part time", "Remote"],
+      "title": "Social Media Marketing Specialist",
+      "type": "Part time",
+      "category": "marketing",
+      "company": "BrandBoost",
+      "logo": "https://i.ibb.co.com/b5sjkckJ/brandboost-digital-personal.png",
+      "location": "Remote",
+      "skills": ["facebook ads", "instagram", "content creation"],
+      "deadline": "01/10/2026",
+      "salary": "12k - 20k",
+      "experience": 2,
+      "responsibilities": [
+        "Create and manage social media campaigns across multiple platforms.",
+        "Analyze metrics and optimize strategies to increase engagement and conversions."
+      ],
+      "requirements": [
+        "Experience in social media marketing and content creation.",
+        "Familiarity with Facebook Ads Manager and Instagram analytics."
+      ]
+    },
+    {
+      "id": 4,
+      "tags": ["Full time", "Urgent"],
+      "title": "UI/UX Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "CreativeMinds Studio",
+      "logo": "https://i.ibb.co.com/nMG5yVqN/images-1.jpg",
+      "location": "Dhaka",
+      "skills": ["figma", "sketch", "prototyping"],
+      "deadline": "01/05/2026",
+      "salary": "22k - 35k",
+      "experience": 4,
+      "responsibilities": [
+        "Design intuitive user interfaces and create wireframes for web and mobile applications.",
+        "Conduct user research and usability testing to improve design effectiveness."
+      ],
+      "requirements": [
+        "Bachelor's degree in Design or related field.",
+        "Proven experience with Figma, Sketch, and prototyping tools."
+      ]
+    },
+    {
+      "id": 5,
+      "tags": ["Full time"],
+      "title": "Full Stack Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "TechNova",
+      "logo": "https://i.ibb.co.com/FLY6BZBq/still-c39eb0285a0af66f0696a6d4573a9810.webp",
+      "location": "Sylhet",
+      "skills": ["node.js", "mongodb", "react"],
+      "deadline": "01/20/2026",
+      "salary": "30k - 50k",
+      "experience": 5,
+      "responsibilities": [
+        "Build and maintain scalable web applications using MERN stack.",
+        "Optimize application performance and troubleshoot technical issues."
+      ],
+      "requirements": [
+        "Bachelor's degree in Computer Science or Engineering.",
+        "Strong knowledge of Node.js, MongoDB, Express, and React."
+      ]
+    },
+    {
+      "id": 6,
+      "tags": ["Contract", "Remote"],
+      "title": "SEO Specialist",
+      "type": "Contract",
+      "category": "marketing",
+      "company": "SearchPro Agency",
+      "logo": "https://i.ibb.co.com/yB0BJWgP/SP-Logo-large-copy-1-768x697.webp",
+      "location": "Remote",
+      "skills": ["seo", "google analytics", "keyword research"],
+      "deadline": "01/12/2026",
+      "salary": "15k - 25k",
+      "experience": 3,
+      "responsibilities": [
+        "Develop and implement SEO strategies to improve organic search rankings.",
+        "Conduct keyword research and analyze website traffic patterns."
+      ],
+      "requirements": [
+        "Proven experience in SEO and digital marketing.",
+        "Proficiency with Google Analytics, SEMrush, or similar tools."
+      ]
+    },
+    {
+      "id": 7,
+      "tags": ["Full time"],
+      "title": "Motion Graphics Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "AnimateHub",
+      "logo": "https://i.ibb.co.com/x8dSR1PB/Adobe-Animate-CC-icon-2020-svg.png",
+      "location": "Dhaka",
+      "skills": ["after effects", "premiere pro", "3d modeling"],
+      "deadline": "01/18/2026",
+      "salary": "20k - 32k",
+      "experience": 4,
+      "responsibilities": [
+        "Create engaging motion graphics and animations for video content.",
+        "Collaborate with video production team to deliver high-quality visual effects."
+      ],
+      "requirements": [
+        "Experience with Adobe After Effects and Premiere Pro.",
+        "Portfolio demonstrating motion graphics and animation skills."
+      ]
+    },
+    {
+      "id": 8,
+      "tags": ["Full time", "Urgent"],
+      "title": "Backend Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "CodeCraft",
+      "logo": "https://i.ibb.co.com/zhQmHvDB/logo-code-craft-876127-13.avif",
+      "location": "Dhaka",
+      "skills": ["python", "django", "postgresql"],
+      "deadline": "01/08/2026",
+      "salary": "28k - 45k",
+      "experience": 4,
+      "responsibilities": [
+        "Design and develop robust backend systems and RESTful APIs.",
+        "Ensure database integrity and optimize query performance."
+      ],
+      "requirements": [
+        "Bachelor's degree in Computer Science or related field.",
+        "Strong experience with Python, Django, and PostgreSQL."
+      ]
+    },
+    {
+      "id": 9,
+      "tags": ["Part time"],
+      "title": "Content Marketing Writer",
+      "type": "Part time",
+      "category": "marketing",
+      "company": "ContentWorks",
+      "logo": "https://i.ibb.co.com/zVKMZG1V/square-on-white.jpg",
+      "location": "Remote",
+      "skills": ["copywriting", "seo writing", "blog writing"],
+      "deadline": "01/25/2026",
+      "salary": "10k - 18k",
+      "experience": 2,
+      "responsibilities": [
+        "Write compelling blog posts, articles, and marketing copy.",
+        "Optimize content for search engines while maintaining readability."
+      ],
+      "requirements": [
+        "Excellent writing and editing skills.",
+        "Understanding of SEO best practices and content marketing."
+      ]
+    },
+    {
+      "id": 10,
+      "tags": ["Full time"],
+      "title": "Brand Identity Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "BrandLab",
+      "logo": "https://i.ibb.co.com/0RVM4SJv/brandlab-ltd-logo-png-seeklogo-22048.png",
+      "location": "Chittagong",
+      "skills": ["branding", "illustrator", "indesign"],
+      "deadline": "01/22/2026",
+      "salary": "19k - 30k",
+      "experience": 3,
+      "responsibilities": [
+        "Develop comprehensive brand identities including logos, color palettes, and style guides.",
+        "Present design concepts to clients and incorporate feedback effectively."
+      ],
+      "requirements": [
+        "Bachelor's degree in Graphic Design or related field.",
+        "Strong portfolio showcasing brand identity and logo design work."
+      ]
+    },
+    {
+      "id": 11,
+      "tags": ["Full time", "Remote"],
+      "title": "WordPress Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "WebWorks Pro",
+      "logo": "https://i.ibb.co.com/7NrK8K6M/images.png",
+      "location": "Remote",
+      "skills": ["wordpress", "php", "mysql"],
+      "deadline": "01/30/2026",
+      "salary": "20k - 35k",
+      "experience": 3,
+      "responsibilities": [
+        "Develop and customize WordPress themes and plugins.",
+        "Troubleshoot and resolve website issues and optimize site performance."
+      ],
+      "requirements": [
+        "Strong knowledge of WordPress, PHP, and MySQL.",
+        "Experience with responsive design and cross-browser compatibility."
+      ]
+    },
+    {
+      "id": 12,
+      "tags": ["Contract", "Urgent"],
+      "title": "Email Marketing Specialist",
+      "type": "Contract",
+      "category": "marketing",
+      "company": "MailMasters",
+      "logo": "https://i.ibb.co.com/8nc7fJxN/64b629e519d8c-thumb900.webp",
+      "location": "Dhaka",
+      "skills": ["mailchimp", "email campaigns", "automation"],
+      "deadline": "01/06/2026",
+      "salary": "14k - 22k",
+      "experience": 2,
+      "responsibilities": [
+        "Design and execute email marketing campaigns to drive engagement.",
+        "Monitor campaign performance and optimize for better open and click rates."
+      ],
+      "requirements": [
+        "Experience with email marketing platforms like Mailchimp or HubSpot.",
+        "Understanding of email marketing best practices and regulations."
+      ]
+    },
+    {
+      "id": 13,
+      "tags": ["Full time"],
+      "title": "Illustrator",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "ArtVista",
+      "logo": "https://i.ibb.co.com/h1W15HyH/logo2.png",
+      "location": "Dhaka",
+      "skills": ["digital illustration", "procreate", "character design"],
+      "deadline": "02/01/2026",
+      "salary": "17k - 28k",
+      "experience": 3,
+      "responsibilities": [
+        "Create original illustrations for books, marketing materials, and digital media.",
+        "Work with art directors to develop visual concepts that align with project goals."
+      ],
+      "requirements": [
+        "Strong illustration skills with a diverse portfolio.",
+        "Proficiency in digital illustration tools like Procreate or Adobe Illustrator."
+      ]
+    },
+    {
+      "id": 14,
+      "tags": ["Full time"],
+      "title": "React Native Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "MobileFirst",
+      "logo": "https://i.ibb.co.com/cSmZSxcD/158327-3145364-401841-image.jpg",
+      "location": "Dhaka",
+      "skills": ["react native", "javascript", "mobile development"],
+      "deadline": "01/28/2026",
+      "salary": "26k - 42k",
+      "experience": 4,
+      "responsibilities": [
+        "Develop cross-platform mobile applications using React Native.",
+        "Integrate third-party APIs and ensure smooth app performance."
+      ],
+      "requirements": [
+        "Bachelor's degree in Computer Science or related field.",
+        "Proven experience in React Native and mobile app development."
+      ]
+    },
+    {
+      "id": 15,
+      "tags": ["Part time", "Remote"],
+      "title": "PPC Campaign Manager",
+      "type": "Part time",
+      "category": "marketing",
+      "company": "AdBoost Pro",
+      "logo": "https://i.ibb.co.com/yc8FPwH5/images-1.png",
+      "location": "Remote",
+      "skills": ["google ads", "ppc", "analytics"],
+      "deadline": "02/05/2026",
+      "salary": "16k - 26k",
+      "experience": 3,
+      "responsibilities": [
+        "Manage and optimize PPC campaigns across Google Ads and social media platforms.",
+        "Analyze campaign data and provide actionable insights for improvement."
+      ],
+      "requirements": [
+        "Experience managing PPC campaigns with proven ROI results.",
+        "Google Ads certification preferred."
+      ]
+    },
+    {
+      "id": 16,
+      "tags": ["Full time", "Urgent"],
+      "title": "Packaging Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "PackMaster",
+      "logo": "https://i.ibb.co.com/sv59qRSp/packmaster-icon-primary.jpg",
+      "location": "Chittagong",
+      "skills": ["packaging design", "illustrator", "3d rendering"],
+      "deadline": "01/10/2026",
+      "salary": "18k - 29k",
+      "experience": 3,
+      "responsibilities": [
+        "Design innovative and functional packaging for consumer products.",
+        "Create mockups and collaborate with manufacturers to ensure design feasibility."
+      ],
+      "requirements": [
+        "Bachelor's degree in Graphic Design or related field.",
+        "Experience in packaging design with a strong portfolio."
+      ]
+    },
+    {
+      "id": 17,
+      "tags": ["Full time"],
+      "title": "DevOps Engineer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "CloudTech",
+      "logo": "https://i.ibb.co.com/zHFxsGWW/Cloudtech-Logo.png",
+      "location": "Dhaka",
+      "skills": ["aws", "docker", "kubernetes"],
+      "deadline": "02/10/2026",
+      "salary": "35k - 55k",
+      "experience": 5,
+      "responsibilities": [
+        "Manage cloud infrastructure and automate deployment processes.",
+        "Monitor system performance and implement security best practices."
+      ],
+      "requirements": [
+        "Bachelor's degree in Computer Science or Engineering.",
+        "Strong experience with AWS, Docker, and Kubernetes."
+      ]
+    },
+    {
+      "id": 18,
+      "tags": ["Contract"],
+      "title": "Influencer Marketing Coordinator",
+      "type": "Contract",
+      "category": "marketing",
+      "company": "InfluenceHub",
+      "logo": "https://i.ibb.co.com/Z6ZRCRby/Influence-Hub-652a9970-d15e-4571-aa71-af0e358ad135.webp",
+      "location": "Dhaka",
+      "skills": ["influencer outreach", "social media", "campaign management"],
+      "deadline": "01/15/2026",
+      "salary": "13k - 21k",
+      "experience": 2,
+      "responsibilities": [
+        "Identify and connect with influencers for brand partnerships.",
+        "Coordinate influencer campaigns and track performance metrics."
+      ],
+      "requirements": [
+        "Experience in influencer marketing or social media management.",
+        "Strong communication and negotiation skills."
+      ]
+    },
+    {
+      "id": 19,
+      "tags": ["Full time"],
+      "title": "Print Designer",
+      "type": "Full time",
+      "category": "graphic_design",
+      "company": "PrintPro Studio",
+      "logo": "https://i.ibb.co.com/ZwZRYfp/logo-1760102677622.png",
+      "location": "Sylhet",
+      "skills": ["indesign", "print production", "typography"],
+      "deadline": "01/20/2026",
+      "salary": "16k - 27k",
+      "experience": 3,
+      "responsibilities": [
+        "Design print materials including brochures, posters, and business cards.",
+        "Prepare files for print production and ensure color accuracy."
+      ],
+      "requirements": [
+        "Bachelor's degree in Graphic Design or related field.",
+        "Strong knowledge of Adobe InDesign and print production processes."
+      ]
+    },
+    {
+      "id": 20,
+      "tags": ["Full time", "Remote"],
+      "title": "E-commerce Developer",
+      "type": "Full time",
+      "category": "web_development",
+      "company": "ShopifyPro",
+      "logo": "https://i.ibb.co.com/RkvjhgSw/shopifypro-logo-n.png",
+      "location": "Remote",
+      "skills": ["shopify", "liquid", "javascript"],
+      "deadline": "02/08/2026",
+      "salary": "24k - 38k",
+      "experience": 3,
+      "responsibilities": [
+        "Build and customize Shopify stores for clients.",
+        "Integrate payment gateways and third-party apps to enhance functionality."
+      ],
+      "requirements": [
+        "Strong experience with Shopify and Liquid templating language.",
+        "Knowledge of e-commerce best practices and conversion optimization."
+      ]
+    },
+    {
+      "id": 21,
+      "tags": ["Full time"],
+      "title": "Growth Marketing Manager",
+      "type": "Full time",
+      "category": "marketing",
+      "company": "GrowthLab",
+      "logo": "https://i.ibb.co.com/cc2bd7M2/growth-lab-logo-vector-32432210.avif",
+      "location": "Dhaka",
+      "skills": ["growth hacking", "analytics", "a/b testing"],
+      "deadline": "02/12/2026",
+      "salary": "30k - 48k",
+      "experience": 4,
+      "responsibilities": [
+        "Develop and execute growth strategies to acquire and retain customers.",
+        "Run A/B tests and analyze data to optimize marketing funnels."
+      ],
+      "requirements": [
+        "Bachelor's degree in Marketing or related field.",
+        "Proven experience in growth marketing with measurable results."
+      ]
+    }
+  ]
+}
