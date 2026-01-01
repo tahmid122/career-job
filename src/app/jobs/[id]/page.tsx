@@ -9,6 +9,16 @@ import {
   FaDollarSign,
   FaLocationDot,
 } from "react-icons/fa6";
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+  const jobs = await fetch(`${process.env.API_URL}/jobs`).then((res) =>
+    res.json()
+  );
+
+  return jobs.map((job: JobType) => ({
+    id: job.id,
+  }));
+}
 interface PageProps {
   params: Promise<{ id: string }>;
 }
@@ -22,7 +32,7 @@ const JobDetails = async ({ params }: PageProps) => {
     throw new Error("Failed to fetch");
   }
   const data: JobType[] = await res.json();
-  const targetJob = data.find((job) => job.id === mainId);
+  const targetJob = data.find((job) => job.id == mainId);
   if (!targetJob) {
     notFound();
   }
