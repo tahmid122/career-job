@@ -5,42 +5,68 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { FaArrowRight } from "react-icons/fa6";
-const Filter = () => {
+import { Dispatch, SetStateAction } from "react";
+import { FaArrowRight, FaXmark } from "react-icons/fa6";
+type Filters = {
+  type: string;
+  category: string;
+  location: string;
+};
+type Props = {
+  filters: Filters;
+  setFilters: Dispatch<SetStateAction<Filters>>;
+};
+const Filter = ({ filters, setFilters }: Props) => {
   return (
     <div className="py-10 grid grid-cols-1 xl:grid-cols-4 gap-2 xl:gap-5">
       {/* Job Type */}
       <div className="w-full">
-        <Select>
+        <Select
+          value={filters.type}
+          onValueChange={(value: string) =>
+            setFilters((prev) => ({ ...prev, type: value }))
+          }
+        >
           <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
             <SelectValue placeholder="Job Types" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="full_time">Full Time</SelectItem>
-            <SelectItem value="remote">Remote</SelectItem>
+            <SelectItem value="Full time">Full Time</SelectItem>
+            <SelectItem value="Part time">Part Time</SelectItem>
           </SelectContent>
         </Select>
       </div>
       {/* Job Categories */}
       <div className="w-full">
-        <Select>
+        <Select
+          value={filters.category}
+          onValueChange={(value: string) =>
+            setFilters((prev) => ({ ...prev, category: value }))
+          }
+        >
           <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
             <SelectValue placeholder="Job Categories" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="graphic_design">Graphic Design</SelectItem>
-            <SelectItem value="digital_marketing">Digital Marketing</SelectItem>
+            <SelectItem value="marketing">Digital Marketing</SelectItem>
             <SelectItem value="web_development">Web Development</SelectItem>
           </SelectContent>
         </Select>
       </div>
       {/* Job Categories */}
       <div className="w-full">
-        <Select>
+        <Select
+          value={filters.location}
+          onValueChange={(value: string) =>
+            setFilters((prev) => ({ ...prev, location: value }))
+          }
+        >
           <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
             <SelectValue placeholder="Locations" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="Remote">Remote</SelectItem>
             <SelectItem value="dhaka">Dhaka</SelectItem>
             <SelectItem value="khulna">Khulna</SelectItem>
             <SelectItem value="rajshahi">Rajshahi</SelectItem>
@@ -48,11 +74,24 @@ const Filter = () => {
         </Select>
       </div>
       {/* button */}
-      <div>
-        <button className="btn2 rounded-none h-full w-full justify-center cursor-pointer">
-          Find Jobs Now <FaArrowRight />
-        </button>
-      </div>
+      {filters.type || filters.category || filters.location ? (
+        <div>
+          <button
+            onClick={(): void => {
+              setFilters({ type: "", category: "", location: "" });
+            }}
+            className="btn2 bg-red-500 rounded-none h-full w-full justify-center cursor-pointer"
+          >
+            Reset Filter <FaXmark />
+          </button>
+        </div>
+      ) : (
+        <div>
+          <button className="btn2 rounded-none h-full w-full justify-center cursor-pointer">
+            Find Jobs Now <FaArrowRight />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

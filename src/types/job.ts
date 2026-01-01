@@ -2,6 +2,7 @@ export interface JobType {
   id: number;
   title: string;
   company: string;
+  category: string;
   logo: string;
   location: string;
   tags: string[];

@@ -11,9 +11,9 @@ import {
 } from "react-icons/fa6";
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  const jobs = await fetch(`${process.env.API_URL}/jobs`).then((res) =>
-    res.json()
-  );
+  const jobs = await fetch(`${process.env.API_URL}/jobs`, {
+    next: { revalidate: 60 },
+  }).then((res) => res.json());
 
   return jobs.map((job: JobType) => ({
     id: job.id.toString(),
