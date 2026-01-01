@@ -2,6 +2,7 @@
 import JobCard from "@/components/JobCard";
 import Filter from "@/components/Jobs/Filter";
 import { JobType } from "@/types/job";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 type Props = {
@@ -13,11 +14,14 @@ type Filters = {
   location: string;
 };
 const JobsClient = ({ jobs }: Props) => {
+  const router = useRouter();
+  const params = useSearchParams();
   const [filters, setFilters] = useState<Filters>({
     type: "",
-    category: "",
-    location: "",
+    category: params.get("category") ?? "",
+    location: params.get("location") ?? "",
   });
+
   const filteredJobs = useMemo(() => {
     return jobs.filter((job) => {
       if (filters.type && job.type !== filters.type) return false;
@@ -26,6 +30,10 @@ const JobsClient = ({ jobs }: Props) => {
       return true;
     });
   }, [jobs, filters]);
+  //   Reset Filter
+  const resetFilter = (): void => {
+    router.push("/jobs");
+  };
   return (
     <section className="min-h-screen">
       {/* Banner */}
@@ -41,7 +49,11 @@ const JobsClient = ({ jobs }: Props) => {
         <div>
           {/* search filter */}
           <div>
-            <Filter filters={filters} setFilters={setFilters} />
+            <Filter
+              filters={filters}
+              setFilters={setFilters}
+              resetFilter={resetFilter}
+            />
           </div>
           {/* cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 py-10">

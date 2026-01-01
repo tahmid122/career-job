@@ -15,8 +15,9 @@ type Filters = {
 type Props = {
   filters: Filters;
   setFilters: Dispatch<SetStateAction<Filters>>;
+  resetFilter: () => void;
 };
-const Filter = ({ filters, setFilters }: Props) => {
+const Filter = ({ filters, setFilters, resetFilter }: Props) => {
   return (
     <div className="py-10 grid grid-cols-1 xl:grid-cols-4 gap-2 xl:gap-5">
       {/* Job Type */}
@@ -79,6 +80,7 @@ const Filter = ({ filters, setFilters }: Props) => {
           <button
             onClick={(): void => {
               setFilters({ type: "", category: "", location: "" });
+              resetFilter();
             }}
             className="btn2 bg-red-500 rounded-none h-full w-full justify-center cursor-pointer"
           >

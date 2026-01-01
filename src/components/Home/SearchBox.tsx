@@ -31,20 +31,22 @@ const SearchBox = () => {
         </SelectTrigger>
         <SelectContent className="">
           <SelectItem value="graphic_design">Graphic Design</SelectItem>
-          <SelectItem value="digital_marketing">Digital Marketing</SelectItem>
+          <SelectItem value="marketing">Digital Marketing</SelectItem>
           <SelectItem value="web_development">Web Development</SelectItem>
         </SelectContent>
       </Select>
       <div className="flex-1 bor pr-4 xl:pr-0 xl:border-none xl:border-l flex items-center justify-between xl:mr-5 w-full xl:w-auto border-t">
-        <input
-          type="text"
-          placeholder="Locations"
-          className="outline-none p-3 w-full"
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setLocation(e.target.value)
-          }
-        />
-        <FaLocationDot className="text-likeOrange" />
+        <Select onValueChange={(value: string) => setLocation(value)}>
+          <SelectTrigger className="h-full shadow-none  ring-0 flex-1 border-none w-full">
+            <SelectValue placeholder="Job Location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Remote">Remote</SelectItem>
+            <SelectItem value="dhaka">Dhaka</SelectItem>
+            <SelectItem value="khulna">Khulna</SelectItem>
+            <SelectItem value="rajshahi">Rajshahi</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
       {/* desktop btn */}
       <button onClick={handleSearch} className="btn h-full xl:flex hidden">
