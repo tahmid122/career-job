@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   );
 
   return jobs.map((job: JobType) => ({
-    id: job.id,
+    id: job.id.toString(),
   }));
 }
 interface PageProps {
