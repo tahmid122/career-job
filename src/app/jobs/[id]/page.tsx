@@ -9,6 +9,7 @@ import {
   FaDollarSign,
   FaLocationDot,
 } from "react-icons/fa6";
+import AddToBookmark from "./AddToBookmark";
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   const jobs = await fetch(`${process.env.API_URL}/db.json`, {
@@ -49,7 +50,7 @@ const JobDetails = async ({ params }: PageProps) => {
       </div>
       {/* main */}
       <div className="container">
-        <div className="px-2.5 xl:max-w-[80%] mx-auto border-t-8 border-t-likeOrange -top-20 relative bg-white shadow-sm">
+        <div className="px-2.5 xl:max-w-[80%]  mx-auto border-t-8 border-t-likeOrange -top-20 relative bg-white shadow-sm">
           <div className="p-2 xl:p-10 space-y-10">
             {/* top part */}
             <div className="flex xl:flex-row flex-col gap-5 xl:gap-0 items-start xl:items-center justify-between">
@@ -110,9 +111,12 @@ const JobDetails = async ({ params }: PageProps) => {
                 </div>
               </div>
               {/* Last */}
-              <Link href={"/"} className="btn">
-                Apply Job <FaArrowRight />
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link href={"/"} className="btn">
+                  Apply Job <FaArrowRight />
+                </Link>
+                <AddToBookmark id={mainId} />
+              </div>
             </div>
             {/* Middle */}
             <div className="border-t-2 border-t-gray-100 py-10 flex xl:flex-row flex-col items-start gap-5">
