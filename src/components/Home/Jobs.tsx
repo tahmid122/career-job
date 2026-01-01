@@ -4,7 +4,7 @@ import JobCard from "../JobCard";
 import { JobType } from "@/types/job";
 
 const Jobs = async () => {
-  const res = await fetch(`${process.env.API_URL}/jobs`, {
+  const res = await fetch(`${process.env.API_URL}/db.json`, {
     next: { revalidate: 60 },
   });
   if (!res.ok) {
@@ -12,6 +12,7 @@ const Jobs = async () => {
   }
   const data: JobType[] = await res.json();
   const featuredJobs: JobType[] = data.slice(0, 6);
+
   return (
     <section>
       <div className="container">

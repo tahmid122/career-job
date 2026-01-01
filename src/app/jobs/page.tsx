@@ -2,7 +2,7 @@ import { JobType } from "@/types/job";
 import JobsClient from "./JobsClient";
 
 const Jobs = async () => {
-  const res = await fetch(`${process.env.API_URL}/jobs`, {
+  const res = await fetch(`${process.env.API_URL}/db.json`, {
     next: { revalidate: 60 },
   });
   if (!res.ok) {

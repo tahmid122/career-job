@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa6";
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
-  const jobs = await fetch(`${process.env.API_URL}/jobs`, {
+  const jobs = await fetch(`${process.env.API_URL}/db.json`, {
     next: { revalidate: 60 },
   }).then((res) => res.json());
 
@@ -25,7 +25,7 @@ interface PageProps {
 const JobDetails = async ({ params }: PageProps) => {
   const { id } = await params;
   const mainId: number = parseInt(id);
-  const res = await fetch(`${process.env.API_URL}/jobs`, {
+  const res = await fetch(`${process.env.API_URL}/db.json`, {
     next: { revalidate: 60 },
   });
   if (!res.ok) {
