@@ -82,7 +82,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/sign-in"
                 className="bg-likeOrange py-3 px-8 text-base rounded-full text-white font-semibold transition-all duration-200 hover:bg-likeGreen flex items-center gap-1"
               >
                 <FaUser className="text-base" /> Sign In
@@ -113,7 +113,7 @@ export default function Navbar() {
         {/* Buttons */}
         <div className="hidden xl:flex items-center gap-1">
           <Link
-            href="/"
+            href="/sign-in"
             className="bg-likeOrange py-3 px-8 text-base rounded-full text-white font-semibold transition-all duration-200 hover:bg-likeGreen flex items-center gap-1"
           >
             <FaUser className="text-base" /> Sign In
