@@ -10,6 +10,7 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import AddToBookmark from "./AddToBookmark";
+import Banner from "@/components/Banner";
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   const jobs = await fetch(`${process.env.API_URL}/db.json`, {
@@ -40,14 +41,7 @@ const JobDetails = async ({ params }: PageProps) => {
   return (
     <section className="min-h-screen bg-[#F5F7FC]">
       {/* Banner */}
-      <div className="h-100 xl:h-125 border bg-[linear-gradient(to_right,#000000b8,#000000b8),url('/jobdetailsbanner.jpg')] bg-center bg-cover flex items-center justify-center text-white">
-        <div>
-          <h1 className="text-4xl mb-4 font-bold text-white">Job Details</h1>
-          <p className="flex items-center gap-1 justify-center font-medium text-white text-lg">
-            Home <FaAngleRight /> Job Details
-          </p>
-        </div>
-      </div>
+      <Banner title="Job Details" />
       {/* main */}
       <div className="container">
         <div className="px-2.5 xl:max-w-[80%]  mx-auto border-t-8 border-t-likeOrange -top-20 relative bg-white shadow-sm">
