@@ -28,7 +28,10 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
             setFilters((prev) => ({ ...prev, type: value }))
           }
         >
-          <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
+          <SelectTrigger
+            className="rounded-none shadow-none text-base py-7 w-full"
+            style={{ backgroundColor: "transparent" }}
+          >
             <SelectValue placeholder="Job Types" />
           </SelectTrigger>
           <SelectContent>
@@ -45,7 +48,10 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
             setFilters((prev) => ({ ...prev, category: value }))
           }
         >
-          <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
+          <SelectTrigger
+            className="rounded-none shadow-none text-base py-7 w-full"
+            style={{ backgroundColor: "transparent" }}
+          >
             <SelectValue placeholder="Job Categories" />
           </SelectTrigger>
           <SelectContent>
@@ -63,7 +69,10 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
             setFilters((prev) => ({ ...prev, location: value }))
           }
         >
-          <SelectTrigger className="rounded-none shadow-none text-base py-7 w-full">
+          <SelectTrigger
+            className="rounded-none shadow-none text-base py-7 w-full"
+            style={{ backgroundColor: "transparent" }}
+          >
             <SelectValue placeholder="Locations" />
           </SelectTrigger>
           <SelectContent>

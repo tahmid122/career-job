@@ -26,7 +26,10 @@ const SearchBox = () => {
   return (
     <div className="flex pt-5 xl:pt-0 xl:flex-row flex-col xl:*:gap-0 gap-2 items-center bg-white xl:h-14 xl:rounded-full xl:w-1/2 xl:pl-2">
       <Select onValueChange={(value: string) => setJobCategory(value)}>
-        <SelectTrigger className="h-full shadow-none  ring-0 flex-1 border-none w-full">
+        <SelectTrigger
+          className="h-full shadow-none  ring-0 flex-1 border-none w-full"
+          style={{ backgroundColor: "transparent" }}
+        >
           <SelectValue placeholder="Job Categories" />
         </SelectTrigger>
         <SelectContent className="">
@@ -37,7 +40,10 @@ const SearchBox = () => {
       </Select>
       <div className="flex-1 bor pr-4 xl:pr-0 xl:border-none xl:border-l flex items-center justify-between xl:mr-5 w-full xl:w-auto border-t">
         <Select onValueChange={(value: string) => setLocation(value)}>
-          <SelectTrigger className="h-full shadow-none  ring-0 flex-1 border-none w-full">
+          <SelectTrigger
+            className="h-full shadow-none  ring-0 flex-1 border-none w-full"
+            style={{ backgroundColor: "transparent" }}
+          >
             <SelectValue placeholder="Job Location" />
           </SelectTrigger>
           <SelectContent>
