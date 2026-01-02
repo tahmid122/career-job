@@ -1,7 +1,15 @@
-import BookmarksCard from "@/components/BookmarksCard";
+import { JobType } from "@/types/job";
 import { FaAngleRight } from "react-icons/fa6";
+import Bookmarks from "./Bookmarks";
 
-const Bookmarks = () => {
+const BookMarks = async () => {
+  const res = await fetch(`${process.env.API_URL}/db.json`, {
+    next: { revalidate: 60 },
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch");
+  }
+  const data: JobType[] = await res.json();
   return (
     <section className="min-h-screen">
       {/* Banner */}
@@ -14,24 +22,12 @@ const Bookmarks = () => {
         </div>
       </div>
       <div className="container">
-        <div>
-          {/* cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 py-10">
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-            <BookmarksCard />
-          </div>
-        </div>
+        {/* bookmarks */}
+
+        <Bookmarks jobs={data} />
       </div>
     </section>
   );
 };
 
-export default Bookmarks;
+export default BookMarks;
