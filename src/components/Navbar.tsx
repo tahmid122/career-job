@@ -119,7 +119,7 @@ export default function Navbar() {
             <FaUser className="text-base" /> Sign In
           </Link>
           <Link
-            href="/"
+            href="/jobs"
             className="bg-likeGreen py-3 px-8 text-base rounded-full text-white font-semibold transition-all duration-200 hover:bg-likeOrange flex items-center gap-1"
           >
             <FaMagnifyingGlass className="text-base" /> Find Jobs
