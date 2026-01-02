@@ -5,7 +5,7 @@ import SearchBox from "./SearchBox";
 import AnimationsDiv from "./AnimationsDiv";
 const Banner = () => {
   return (
-    <section className="border bg-[url('/banner.jpg')] bg-no-repeat bg-center bg-cover  overflow-hidden">
+    <section className="bg-[url('/banner.jpg')] bg-no-repeat bg-center bg-cover  overflow-hidden">
       <div className="container">
         <div className="mt-25 h-125 xl:h-170 flex flex-col justify-center gap-5 relative">
           {/* Animations */}

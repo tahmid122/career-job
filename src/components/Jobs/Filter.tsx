@@ -29,12 +29,12 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
           }
         >
           <SelectTrigger
-            className="rounded-none shadow-none text-base py-7 w-full"
+            className="rounded-none shadow-none text-base py-7 w-full dark:border-slate-700 dark:text-white"
             style={{ backgroundColor: "transparent" }}
           >
             <SelectValue placeholder="Job Types" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="dark:bg-darkBlack dark:text-white dark:border-slate-700">
             <SelectItem value="Full time">Full Time</SelectItem>
             <SelectItem value="Part time">Part Time</SelectItem>
           </SelectContent>
@@ -49,12 +49,12 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
           }
         >
           <SelectTrigger
-            className="rounded-none shadow-none text-base py-7 w-full"
+            className="rounded-none shadow-none text-base py-7 w-full dark:border-slate-700 dark:text-white"
             style={{ backgroundColor: "transparent" }}
           >
             <SelectValue placeholder="Job Categories" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="dark:bg-darkBlack dark:text-white dark:border-slate-700">
             <SelectItem value="graphic_design">Graphic Design</SelectItem>
             <SelectItem value="marketing">Digital Marketing</SelectItem>
             <SelectItem value="web_development">Web Development</SelectItem>
@@ -70,12 +70,12 @@ const Filter = ({ filters, setFilters, resetFilter }: Props) => {
           }
         >
           <SelectTrigger
-            className="rounded-none shadow-none text-base py-7 w-full"
+            className="rounded-none shadow-none text-base py-7 w-full dark:border-slate-700 dark:text-white"
             style={{ backgroundColor: "transparent" }}
           >
             <SelectValue placeholder="Locations" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="dark:bg-darkBlack dark:text-white dark:border-slate-700">
             <SelectItem value="Remote">Remote</SelectItem>
             <SelectItem value="dhaka">Dhaka</SelectItem>
             <SelectItem value="khulna">Khulna</SelectItem>

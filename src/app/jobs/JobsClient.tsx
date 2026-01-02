@@ -36,7 +36,7 @@ const JobsClient = ({ jobs }: Props) => {
     router.push("/jobs");
   };
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen dark:bg-darkBlack">
       {/* Banner */}
       <Banner title="All Jobs" />
       <div className="container">

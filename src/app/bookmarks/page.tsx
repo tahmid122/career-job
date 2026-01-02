@@ -12,7 +12,7 @@ const BookMarks = async () => {
   }
   const data: JobType[] = await res.json();
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen dark:bg-darkBlack">
       {/* Banner */}
       <Banner title="Bookmarks" />
       <div className="container">

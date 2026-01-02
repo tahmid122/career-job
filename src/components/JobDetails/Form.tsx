@@ -22,19 +22,19 @@ const Form = () => {
       <input
         type="text"
         name="name"
-        className="w-full bg-[#F5F7FC] outline-none p-3 placeholder:font-semibold"
+        className="w-full bg-[#F5F7FC] dark:bg-slate-900 dark:text-white outline-none p-3 placeholder:font-semibold"
         placeholder="Your Full Name"
       />
       <input
         type="email"
         name="email"
-        className="w-full bg-[#F5F7FC] outline-none p-3 placeholder:font-semibold"
+        className="w-full bg-[#F5F7FC] dark:bg-slate-900 dark:text-white outline-none p-3 placeholder:font-semibold"
         placeholder="Email Address"
       />
 
       <textarea
         name="message"
-        className="w-full bg-[#F5F7FC] outline-none p-3 placeholder:font-semibold h-50 resize-none"
+        className="w-full bg-[#F5F7FC] dark:bg-slate-900 dark:text-white outline-none p-3 placeholder:font-semibold h-50 resize-none"
         placeholder="Write comments"
       ></textarea>
       <button className="btn">

@@ -28,7 +28,7 @@ const JobCard = ({ singleJob }: JobCardProps) => {
   };
   const days = getDayLeft(singleJob?.deadline);
   return (
-    <div className="border border-slate-200 p-5 transition-all duration-300 hover:shadow-sm space-y-5">
+    <div className="border border-slate-200 dark:border-slate-700 p-5 transition-all duration-300 hover:shadow-sm space-y-5">
       {/* Upper tags part */}
       <div className="flex flex-wrap gap-2 items-center justify-between">
         <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ const JobCard = ({ singleJob }: JobCardProps) => {
             </span>
           ))}
         </div>
-        <div className="text-sm flex items-center gap-2 text-slate-600">
+        <div className="text-sm flex items-center gap-2 text-slate-600 dark:text-white">
           <FaCalendar className="text-base text-likeGreen -mt-0.5" /> Deadline:{" "}
           {singleJob.deadline}
         </div>
@@ -61,11 +61,13 @@ const JobCard = ({ singleJob }: JobCardProps) => {
           />
         </div>
         <div className="space-y-1">
-          <h3 className="text-lg font-bold">{singleJob.title}</h3>
+          <h3 className="text-lg font-bold dark:text-white">
+            {singleJob.title}
+          </h3>
           <span className="text-sm text-likeGreen font-medium block">
             {singleJob.company}
           </span>
-          <span className="flex items-end gap-1 text-sm text-slate-600">
+          <span className="flex items-end gap-1 text-sm text-slate-600 dark:text-white">
             <FaLocationDot className="text-xl text-likeGreen" />{" "}
             {singleJob.location}
           </span>
@@ -73,19 +75,19 @@ const JobCard = ({ singleJob }: JobCardProps) => {
       </div>
       {/* Salary and Experience */}
       <div className="flex flex-wrap items-center gap-5">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 dark:text-white">
           <span className="flex items-center">
             <FaDollarSign className="text-likeGreen text-base" />
           </span>
-          <span className="flex items-center text-base text-slate-600 leading-0">
+          <span className="flex items-center text-base text-slate-600 dark:text-white leading-0">
             {singleJob.salary}
           </span>
         </div>
         <div className="flex items-center gap-1">
-          <span className="flex items-center text-base text-slate-600 leading-0 gap-1">
+          <span className="flex items-center text-base text-slate-600 dark:text-white leading-0 gap-1">
             <FaBriefcase className="text-likeGreen text-base" /> Experience:
           </span>
-          <span className="flex items-center text-base text-slate-600 leading-0">
+          <span className="flex items-center text-base text-slate-600 dark:text-white leading-0">
             {singleJob?.experience} Years
           </span>
         </div>
@@ -111,7 +113,9 @@ const JobCard = ({ singleJob }: JobCardProps) => {
           />
           <span
             className={`text-base ${
-              days > 0 ? "text-slate-600" : "text-red-500 font-semibold"
+              days > 0
+                ? "text-slate-600 dark:text-white"
+                : "text-red-500 font-semibold"
             } leading-0`}
           >
             {days > 0 ? `${days} Days Left To Apply` : "Time over"}

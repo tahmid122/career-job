@@ -48,10 +48,10 @@ export default function Navbar() {
           <div className="h-10 w-10 relative">
             <Image src={"/logo.png"} fill alt="logo" />
           </div>
-          <span className="text-2xl font-bold">CareerJob</span>
+          <span className="text-2xl font-bold dark:text-white">CareerJob</span>
         </Link>
         {/* Toggle */}
-        <span className="xl:hidden">
+        <span className="xl:hidden dark:text-white">
           {isShow ? (
             <FaXmark
               className="text-2xl cursor-pointer"
@@ -99,7 +99,7 @@ export default function Navbar() {
           </ul>
         </div>
         {/* Nav links */}
-        <ul className="hidden xl:flex items-center  gap-5 text-base font-semibold">
+        <ul className="hidden xl:flex items-center  gap-5 text-base font-semibold dark:text-white">
           <li className="hover:text-likeOrange relative transition-all duration-200 after:absolute after:block after:h-0.5 after:bg-likeOrange after:w-0 after:bottom-0 after:left-0 hover:after:w-full hover:after:transition-all hover:after:duration-300 after:transition-all after:duration-300">
             <Link href={"/"}>Home</Link>
           </li>

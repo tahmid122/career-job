@@ -39,12 +39,12 @@ const JobDetails = async ({ params }: PageProps) => {
     notFound();
   }
   return (
-    <section className="min-h-screen bg-[#F5F7FC]">
+    <section className="min-h-screen bg-[#F5F7FC] dark:bg-slate-900">
       {/* Banner */}
       <Banner title="Job Details" />
       {/* main */}
       <div className="container">
-        <div className="px-2.5 xl:max-w-[80%]  mx-auto border-t-8 border-t-likeOrange -top-20 relative bg-white shadow-sm">
+        <div className="px-2.5 xl:max-w-[80%]  mx-auto border-t-8 border-t-likeOrange -top-20 relative bg-white shadow-sm dark:bg-darkBlack">
           <div className="p-2 xl:p-10 space-y-10">
             {/* top part */}
             <div className="flex xl:flex-row flex-col gap-5 xl:gap-0 items-start xl:items-center justify-between">
@@ -74,7 +74,9 @@ const JobDetails = async ({ params }: PageProps) => {
                         </span>
                       ))}
                     </div>
-                    <h3 className="text-lg font-bold">{targetJob.title}</h3>
+                    <h3 className="text-lg font-bold dark:text-white">
+                      {targetJob.title}
+                    </h3>
                     {/* Skills */}
                     <div className="flex items-center flex-wrap gap-1">
                       {targetJob?.skills.map((skill, idx) => (
@@ -91,7 +93,7 @@ const JobDetails = async ({ params }: PageProps) => {
               </div>
               {/* middle */}
               <div className="flex items-center gap-2">
-                <span className="flex items-end gap-1 text-sm text-slate-600">
+                <span className="flex items-end gap-1 text-sm text-slate-600 dark:text-white">
                   <FaLocationDot className="text-xl text-likeGreen" />{" "}
                   {targetJob.location}
                 </span>
@@ -99,7 +101,7 @@ const JobDetails = async ({ params }: PageProps) => {
                   <span className="flex items-center">
                     <FaDollarSign className="text-likeGreen text-base" />
                   </span>
-                  <span className="flex items-center text-base text-slate-600 leading-0">
+                  <span className="flex items-center text-base text-slate-600 dark:text-white leading-0">
                     {targetJob.salary}
                   </span>
                 </div>
@@ -113,19 +115,19 @@ const JobDetails = async ({ params }: PageProps) => {
               </div>
             </div>
             {/* Middle */}
-            <div className="border-t-2 border-t-gray-100 py-10 flex xl:flex-row flex-col items-start gap-5">
+            <div className="border-t-2 border-t-gray-100 dark:border-t-slate-700 py-10 flex xl:flex-row flex-col items-start gap-5">
               {/* left */}
               <div className="flex-1 space-y-10">
                 {/* section 1 */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-5">
+                  <h3 className="text-2xl font-semibold mb-5 dark:text-white">
                     Responsibilities
                   </h3>
                   <ul className="space-y-2">
                     {targetJob?.responsibilities?.map((res, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2 text-base text-gray-600 font-medium"
+                        className="flex items-start gap-2 text-base text-gray-600 dark:text-gray-300 font-medium"
                       >
                         <Image
                           src={"/tick.png"}
@@ -141,12 +143,14 @@ const JobDetails = async ({ params }: PageProps) => {
                 </div>
                 {/* section 2 */}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-5">Requirements</h3>
+                  <h3 className="text-2xl font-semibold mb-5 dark:text-white">
+                    Requirements
+                  </h3>
                   <ul className="space-y-2">
                     {targetJob.requirements.map((req, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2 text-base text-gray-600 font-medium"
+                        className="flex items-start gap-2 text-base text-gray-600  dark:text-gray-300 font-medium"
                       >
                         <Image
                           src={"/tick.png"}
@@ -164,31 +168,31 @@ const JobDetails = async ({ params }: PageProps) => {
               {/* right */}
               <div className="xl:w-[35%]  space-y-5">
                 {/* top */}
-                <div className="border p-5">
-                  <h3 className="text-2xl font-semibold mb-5">
+                <div className="border dark:border-slate-700 p-5">
+                  <h3 className="text-2xl font-semibold mb-5 dark:text-white">
                     Job Information
                   </h3>
                   <ul className="space-y-2">
-                    <li className="w-full flex text-base">
-                      <span className="text-gray-600 font-semibold min-w-1/2">
+                    <li className="w-full flex text-base dark:text-white">
+                      <span className="text-gray-600 dark:text-gray-300 font-semibold min-w-1/2">
                         Company Name
                       </span>
                       {targetJob?.company}
                     </li>
-                    <li className="w-full flex text-base">
-                      <span className="text-gray-600 font-semibold min-w-1/2">
+                    <li className="w-full flex text-base dark:text-white">
+                      <span className="text-gray-600 dark:text-gray-300 font-semibold min-w-1/2">
                         Job Title
                       </span>
                       {targetJob?.title}
                     </li>
-                    <li className="w-full flex text-base">
-                      <span className="text-gray-600 font-semibold min-w-1/2">
+                    <li className="w-full flex text-base dark:text-white">
+                      <span className="text-gray-600 dark:text-gray-300 font-semibold min-w-1/2">
                         Job Type
                       </span>
                       {targetJob.type}
                     </li>
-                    <li className="w-full flex text-base">
-                      <span className="text-gray-600 font-semibold min-w-1/2">
+                    <li className="w-full flex text-base dark:text-white">
+                      <span className="text-gray-600 dark:text-gray-300 font-semibold min-w-1/2">
                         Salary
                       </span>
                       {targetJob?.salary}
@@ -196,8 +200,8 @@ const JobDetails = async ({ params }: PageProps) => {
                   </ul>
                 </div>
                 {/* bottom */}
-                <div className="border p-5">
-                  <h3 className="text-2xl font-semibold mb-5">
+                <div className="border dark:border-slate-700 p-5">
+                  <h3 className="text-2xl font-semibold mb-5 dark:text-white">
                     Send Us Message
                   </h3>
                   <Form />

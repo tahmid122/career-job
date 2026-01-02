@@ -14,11 +14,13 @@ const Jobs = async () => {
   const featuredJobs: JobType[] = data.slice(0, 6);
 
   return (
-    <section>
+    <section className="dark:bg-darkBlack">
       <div className="container">
         <div className="py-20 xl:py-25">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-semibold">Featured Jobs</h1>
+            <h1 className="text-3xl font-semibold dark:text-white">
+              Featured Jobs
+            </h1>
             <Link href={"/jobs"} className="btn2">
               Browse All Jobs <FaArrowRight />
             </Link>
