@@ -2,6 +2,8 @@
 
 A modern, full-featured job portal built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS**. This application helps users explore job opportunities, filter positions, bookmark favorites, and manage their job search journey with an intuitive user interface.
 
+## 🚀 Live: https://career-job-portal.vercel.app/
+
 ## 🌟 Features
 
 - **Job Listings**: Browse and explore job opportunities with detailed information
